@@ -181,16 +181,65 @@ footer{
 
 /* Responsive */
 
+/* Menu Button */
+
+.menu-btn{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+    color:#fff;
+}
+
+/* Responsive */
+
 @media(max-width:768px){
 
 header{
-    flex-direction:column;
-    gap:20px;
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:18px 6%;
+}
+
+.logo{
+    font-size:26px;
+}
+
+.menu-btn{
+    display:block;
+}
+
+nav{
+    width:100%;
+    display:none;
+}
+
+nav.active{
+    display:block;
 }
 
 nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    margin-top:20px;
+    background:#0f172a;
+}
+
+nav ul li{
+    margin:0;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+nav ul li a{
+    display:block;
+    padding:15px;
+}
+
+.btn{
+    display:none;
 }
 
 .hero h1{
@@ -200,6 +249,25 @@ nav ul{
 .hero p,
 .about p{
     width:90%;
+}
+
+}
+
+/* Desktop */
+
+@media(min-width:769px){
+
+.menu-btn{
+    display:none;
+}
+
+nav{
+    display:block !important;
+}
+
+nav ul{
+    display:flex;
+    flex-direction:row;
 }
 
 }

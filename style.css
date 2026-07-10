@@ -76,7 +76,7 @@ nav ul li a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    color:white;
+    color:#fff;
 }
 
 .hero h1{
@@ -93,7 +93,7 @@ nav ul li a:hover{
     padding:14px 30px;
     border:none;
     border-radius:30px;
-    background:white;
+    background:#fff;
     color:#2563eb;
     font-weight:bold;
     cursor:pointer;
@@ -109,7 +109,7 @@ nav ul li a:hover{
 }
 
 .card{
-    background:white;
+    background:#fff;
     padding:30px;
     border-radius:12px;
     box-shadow:0 8px 20px rgba(0,0,0,.1);
@@ -147,7 +147,7 @@ nav ul li a:hover{
 
 footer{
     background:#0f172a;
-    color:white;
+    color:#fff;
     margin-top:50px;
 }
 
@@ -186,69 +186,101 @@ footer{
     color:#ccc;
 }
 
-/* Mobile */
+/* ==========================
+   Mobile Responsive
+========================== */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-.menu-btn{
-display:block;
-}
+    .menu-btn{
+        display:block;
+        font-size:28px;
+    }
 
-.btn{
-display:none;
-}
+    .btn{
+        display:none;
+    }
 
-header{
-padding:15px 5%;
-}
+    header{
+        padding:15px 5%;
+    }
 
-nav{
-position:absolute;
-top:100%;
-left:0;
-width:100%;
-background:#0f172a;
-display:none;
-}
+    nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#0f172a;
+        display:none;
+        border-top:1px solid rgba(255,255,255,.1);
+    }
 
-nav.active{
-display:block;
-}
+    nav.active{
+        display:block;
+    }
 
-nav ul{
-flex-direction:column;
-text-align:center;
-padding:20px 0;
-}
+    nav ul{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:20px;
+    }
 
-nav ul li{
-margin:15px 0;
-}
+    nav ul li{
+        width:100%;
+        margin:0;
+    }
 
-.hero{
-height:auto;
-padding:80px 20px;
-}
+    nav ul li a{
+        display:block;
+        width:100%;
+        padding:14px 0;
+        border-bottom:1px solid rgba(255,255,255,.08);
+    }
 
-.hero h1{
-font-size:36px;
-}
+    .hero{
+        height:auto;
+        padding:80px 20px;
+    }
 
-.hero p{
-width:100%;
-}
+    .hero h1{
+        font-size:36px;
+    }
 
-.about p{
-width:100%;
-}
+    .hero p{
+        width:100%;
+    }
 
-.cards{
-padding:50px 5%;
-}
+    .cards{
+        grid-template-columns:1fr;
+        padding:50px 5%;
+    }
 
-.footer-container{
-grid-template-columns:1fr;
-text-align:center;
-}
+    .about{
+        padding:50px 5%;
+    }
+
+    .about p{
+        width:100%;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:left;
+        padding:40px 5%;
+    }
+
+    .footer-container div{
+        margin-bottom:20px;
+    }
+
+    .footer-container ul{
+        padding:0;
+    }
+
+    .copyright{
+        text-align:center;
+        padding:15px;
+    }
 
 }

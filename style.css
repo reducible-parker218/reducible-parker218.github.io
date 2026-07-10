@@ -1,14 +1,16 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+/* ===========================
+   RESET
+=========================== */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
-}
-
-html{
     scroll-behavior:smooth;
 }
 
@@ -18,23 +20,33 @@ body{
     overflow-x:hidden;
 }
 
-/*================ HEADER ================*/
+/* ===========================
+   HEADER
+=========================== */
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:92%;
+    max-width:1250px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    padding:18px 8%;
+    padding:15px 35px;
 
-    background:rgba(15,23,42,.92);
-    backdrop-filter:blur(12px);
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(18px);
 
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    z-index:1000;
 }
 
 .logo{
@@ -46,13 +58,18 @@ header{
 
 nav ul{
     display:flex;
+    align-items:center;
     list-style:none;
     gap:35px;
 }
 
+nav ul li{
+    list-style:none;
+}
+
 nav ul li a{
-    color:#fff;
     text-decoration:none;
+    color:#fff;
     font-size:16px;
     font-weight:500;
     position:relative;
@@ -63,8 +80,8 @@ nav ul li a::after{
     content:"";
     position:absolute;
     left:0;
-    bottom:-6px;
-    width:0%;
+    bottom:-8px;
+    width:0;
     height:2px;
     background:#38bdf8;
     transition:.35s;
@@ -78,208 +95,461 @@ nav ul li a:hover::after{
     width:100%;
 }
 
-/*================ HERO ================*/
+/* Hamburger */
+
+.menu-btn{
+    display:none;
+    color:white;
+    font-size:32px;
+    cursor:pointer;
+}
+
+/* ===========================
+   HERO
+=========================== */
 
 .hero{
-    min-height:88vh;
+
+    min-height:100vh;
+
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
-    color:#fff;
+
+    padding:120px 8% 80px;
+
+    color:white;
 
     background:
-    linear-gradient(rgba(15,23,42,.6),rgba(15,23,42,.6)),
+    linear-gradient(rgba(15,23,42,.55),rgba(15,23,42,.55)),
     linear-gradient(135deg,#2563eb,#7c3aed);
+
+}
+
+.hero-content{
+    max-width:850px;
 }
 
 .hero h1{
-    font-size:60px;
-    margin-bottom:20px;
+
+    font-size:64px;
     font-weight:700;
+    margin-bottom:20px;
+
 }
 
 .hero p{
-    width:65%;
-    margin:auto;
-    line-height:1.9;
+
     font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
     opacity:.95;
+
 }
 
 .hero button{
-    margin-top:35px;
-    padding:15px 34px;
+
+    padding:15px 40px;
+
     border:none;
+
     border-radius:40px;
-    background:white;
+
+    background:#fff;
+
     color:#2563eb;
+
+    font-size:16px;
+
     font-weight:600;
+
     cursor:pointer;
+
     transition:.35s;
-    box-shadow:0 12px 30px rgba(0,0,0,.2);
+
 }
 
 .hero button:hover{
+
     transform:translateY(-5px);
-    background:#38bdf8;
-    color:white;
+
+    box-shadow:0 15px 35px rgba(255,255,255,.3);
+
 }
 
-/*================ CARDS ================*/
+/* ===========================
+   CARDS
+=========================== */
 
 .cards{
-    padding:90px 8%;
+
     display:grid;
-    gap:35px;
+
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    padding:90px 8%;
+
 }
 
 .card{
+
     background:#fff;
+
     border-radius:18px;
+
     padding:35px;
 
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.06);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 
-    transition:.4s;
-    border:1px solid #e2e8f0;
+    transition:.35s;
+
 }
 
 .card:hover{
+
     transform:translateY(-10px);
-    box-shadow:0 25px 45px rgba(37,99,235,.15);
+
+    box-shadow:0 20px 45px rgba(37,99,235,.18);
+
 }
 
 .card h2{
+
+    margin-bottom:15px;
+
     color:#2563eb;
-    margin-bottom:18px;
+
+    font-size:24px;
+
 }
 
 .card p{
+
     color:#64748b;
-    line-height:1.8;
+
+    line-height:1.7;
+
 }
 
-/*================ ABOUT ================*/
+/* ===========================
+   ABOUT
+=========================== */
 
 .about{
-    padding:90px 8%;
+
+    padding:80px 8%;
+
     text-align:center;
-    background:white;
+
 }
 
 .about h2{
-    font-size:38px;
+
+    font-size:40px;
+
     color:#2563eb;
+
     margin-bottom:20px;
+
 }
 
 .about p{
-    width:70%;
+
+    max-width:850px;
+
     margin:auto;
+
     line-height:1.9;
+
     color:#64748b;
+
+    font-size:17px;
+
 }
 
-/*================ FOOTER ================*/
+/* ===========================
+   FOOTER
+=========================== */
 
 footer{
-    background:#0f172a;
+
+    background:#020617;
+
     color:white;
+
     margin-top:80px;
+
 }
 
 .footer-container{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
     gap:40px;
-    padding:60px 8%;
+
+    padding:70px 8%;
+
 }
 
 .footer-container h3{
-    margin-bottom:18px;
+
+    margin-bottom:20px;
+
+    font-size:22px;
+
+}
+
+.footer-container p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
 }
 
 .footer-container ul{
+
     list-style:none;
+
 }
 
-.footer-container li{
+.footer-container ul li{
+
     margin-bottom:12px;
+
 }
 
-.footer-container a{
+.footer-container ul li a{
+
     color:#cbd5e1;
+
     text-decoration:none;
+
     transition:.3s;
+
 }
 
-.footer-container a:hover{
+.footer-container ul li a:hover{
+
     color:#38bdf8;
-    padding-left:5px;
+
+    padding-left:8px;
+
 }
 
 .copyright{
+
     text-align:center;
+
     padding:22px;
+
     border-top:1px solid rgba(255,255,255,.08);
+
     color:#94a3b8;
+
 }
 
-/*================ MOBILE ================*/
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn{
+
+    display:inline-block;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:14px 28px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f1f5f9;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
 
 @media(max-width:768px){
 
 header{
-    padding:15px 20px;
-    flex-direction:row;
+
+    width:100%;
+    top:0;
+    left:0;
+    transform:none;
+
+    border-radius:0;
+
+    padding:18px 25px;
+
 }
 
-.logo{
-    font-size:24px;
+.menu-btn{
+
+    display:block;
+
 }
 
 nav{
+
+    position:absolute;
+
+    top:75px;
+
+    left:0;
+
     width:100%;
-    margin-top:15px;
+
+    background:#0f172a;
+
+    display:none;
+
+}
+
+nav.active{
+
+    display:block;
+
 }
 
 nav ul{
+
     flex-direction:column;
-    align-items:center;
-    gap:18px;
-    padding-top:15px;
+
+    gap:0;
+
+}
+
+nav ul li{
+
+    width:100%;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+nav ul li a{
+
+    display:block;
+
+    padding:18px;
+
 }
 
 .hero{
-    min-height:80vh;
-    padding:30px 20px;
+
+    padding-top:140px;
+
 }
 
 .hero h1{
-    font-size:38px;
+
+    font-size:42px;
+
 }
 
 .hero p{
-    width:100%;
+
     font-size:16px;
+
 }
 
-.about{
-    padding:60px 20px;
+.about h2{
+
+    font-size:32px;
+
 }
 
 .about p{
+
     width:100%;
+
 }
 
 .cards{
-    padding:60px 20px;
+
+    padding:60px 6%;
+
 }
 
 .footer-container{
-    padding:50px 20px;
+
+    padding:50px 6%;
+
 }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+.logo{
+
+    font-size:24px;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero p{
+
+    font-size:15px;
+
+}
+
+.hero button{
+
+    width:100%;
+
+}
+
 }

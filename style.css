@@ -271,3 +271,33 @@ nav ul{
 }
 
 }
+
+
+
+.menu-btn{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+.menu-btn{
+    display:block;
+}
+
+nav{
+    display:none;
+    width:100%;
+}
+
+nav.active{
+    display:block;
+}
+
+nav ul{
+    display:flex;
+    flex-direction:column;
+}
+
+}
